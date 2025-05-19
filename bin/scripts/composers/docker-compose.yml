@@ -1,0 +1,49 @@
+services:
+  web:
+    container_name: web_container 
+    build:
+      context: ../../../
+      dockerfile: ./apps/web/Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - app_network
+    env_file: "../../../apps/web/.env"
+
+  cron:
+    container_name: cron_container
+    build:
+      context: ../../../
+      dockerfile: ./apps/cron/Dockerfile
+    restart: always
+    networks:
+      - app_network
+    env_file: "../../../apps/cron/.env"
+
+  mongo:
+    image: mongo
+    container_name: mongo_container
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: localpass
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongo-express_container
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: mongo 
+      ME_CONFIG_MONGODB_ADMINPASSWORD: localpass
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:localpass@localhost:27017/
+      ME_CONFIG_BASICAUTH: false
+
+networks:
+  app_network:
+    external: false
+

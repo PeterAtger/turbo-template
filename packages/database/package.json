@@ -1,0 +1,19 @@
+{
+  "name": "@repo/database",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Peter Atef <peter.hanna.atef@gmail.com> (https://github.com/peteratger)",
+  "scripts": {},
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "5.8.2"
+  }
+}
