@@ -1,0 +1,26 @@
+{
+  "name": "@repo/utils",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Peter Atef <peter.hanna.atef@gmail.com> (https://github.com/peteratger)",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@sentry/node": "^8.51.0",
+    "dotenv": "^16.4.5",
+    "papaparse": "^5.4.1",
+    "pino": "^8.16.1",
+    "pino-pretty": "^10.2.3",
+    "short-unique-id": "^5.2.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "eslint": "^9.23.0",
+    "typescript": "5.8.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@repo/typescript-config",
+  "author": "Peter Atef <peter.hanna.atef@gmail.com> (https://github.com/peteratger)",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
